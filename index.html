@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDELRAHMAN ACADEMY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <a class="brand" href="#home">
+        🎓 ABDELRAHMAN <span>ACADEMY</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="mainNav">
+        <a href="#home">الرئيسية</a>
+        <a href="#subjects">المواد</a>
+        <a href="#library">المكتبة</a>
+        <a href="#quiz">الاختبارات</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">منصتك التعليمية للمرحلة الثانوية</p>
+
+            <h1>
+                طريقك للتفوق
+                <br>
+                <span>يبدأ من هنا</span>
+            </h1>
+
+            <p class="hero-text">
+                دروس منظمة وملخصات واختبارات تساعدك
+                على متابعة تقدمك الدراسي.
+            </p>
+
+            <a class="primary-btn" href="#subjects">
+                ابدأ التعلم
+            </a>
+        </div>
+
+        <div class="hero-badge">
+            <strong>تعلم</strong>
+            <span>تدرّب</span>
+            <strong>تفوّق</strong>
+        </div>
+    </section>
+
+    <section class="section" id="study-system">
+        <div class="section-heading">
+            <h2>اختر نظامك الدراسي</h2>
+        </div>
+
+        <div class="system-panel">
+
+            <label>النظام الدراسي</label>
+
+            <select id="systemSelect">
+                <option value="general">الثانوية العامة</option>
+                <option value="baccalaureate">البكالوريا المصرية</option>
+            </select>
+
+            <label>الصف الدراسي</label>
+
+            <select id="gradeSelect">
+                <option value="first">الصف الأول الثانوي</option>
+                <option value="second">الصف الثاني الثانوي</option>
+                <option value="third">الصف الثالث الثانوي</option>
+            </select>
+
+            <button class="primary-btn" id="saveSettings">
+                حفظ الاختيار
+            </button>
+
+            <p id="settingsMessage"></p>
+
+        </div>
+    </section>
+
+    <section class="section" id="subjects">
+
+        <div class="section-heading">
+            <h2>المواد الدراسية</h2>
+            <p>اختر مادة لعرض الدروس المتاحة.</p>
+        </div>
+
+        <div class="subject-grid" id="subjectGrid"></div>
+
+        <div class="lessons-panel" id="lessonsPanel" hidden>
+
+            <div class="lessons-head">
+                <h3 id="lessonsTitle">الدروس</h3>
+                <button id="closeLessons">إغلاق ✕</button>
+            </div>
+
+            <div id="lessonsList" class="lessons-list"></div>
+
+        </div>
+
+    </section>
+
+    <section class="section library-section" id="library">
+
+        <div class="section-heading">
+            <h2>المكتبة التعليمية</h2>
+            <p>ابحث عن الملخصات والمواد التعليمية.</p>
+        </div>
+
+        <div class="library-tools">
+            <input
+                id="librarySearch"
+                type="search"
+                placeholder="ابحث عن ملخص أو مادة..."
+            >
+        </div>
+
+        <div id="libraryList" class="library-list"></div>
+
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+
+        <div class="section-heading">
+            <h2>الاختبارات الإلكترونية</h2>
+            <p>اختبر معلوماتك واحصل على نتيجتك فورًا.</p>
+        </div>
+
+        <div class="quiz-box">
+
+            <label>اختر المادة</label>
+
+            <select id="quizSubject">
+                <option value="arabic">اللغة العربية</option>
+                <option value="english">اللغة الإنجليزية</option>
+                <option value="math">الرياضيات</option>
+                <option value="history">التاريخ</option>
+                <option value="programming">البرمجة</option>
+            </select>
+
+            <div id="quizQuestions"></div>
+
+            <button class="primary-btn" id="submitQuiz">
+                تصحيح الاختبار
+            </button>
+
+            <div id="quizResult"></div>
+
+        </div>
+
+    </section>
+
+    <section class="section progress-section">
+
+        <div class="section-heading">
+            <h2>متابعتك الدراسية</h2>
+        </div>
+
+        <div class="progress-card">
+
+            <div>
+                <span>الاختبارات المكتملة</span>
+                <strong id="testsCount">0</strong>
+            </div>
+
+            <div>
+                <span>آخر نتيجة</span>
+                <strong id="lastScore">—</strong>
+            </div>
+
+        </div>
+
+        <p class="note">
+            يتم حفظ تقدمك على هذا الجهاز.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        © <span id="year"></span>
+        ABDELRAHMAN ACADEMY
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
